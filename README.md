@@ -2,4 +2,4 @@
 <br />
 <hr color="red">
 <br /><br />
-<h2>كيفية التنصيب </h2>
+<a href ="#"> How to install ? </a>
