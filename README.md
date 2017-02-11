@@ -1,1 +1,1 @@
-# By <a href ="telegram.me/omar_real"> OmarReal </a>
+# By <a href ="telegram.me/omar_real" target="blank"> OmarReal </a>
