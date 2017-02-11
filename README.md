@@ -2,4 +2,4 @@
 <br />
 <hr color="red">
 <br /><br />
-<a href ="#"> # How to install ? </a>
+<a href ="#"> <h1> How to install ?</h1></a>
