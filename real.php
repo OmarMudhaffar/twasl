@@ -1,8 +1,8 @@
 <?php
 
-$botToken = "300049013:AAH_MhPC3CyxQUvLF2LR37u3eSbMRa5ZkYE";
+$botToken = ""; // your bot token
 $website = "https://api.telegram.org/bot".$botToken;
-$sudo_id = 325384922;
+$sudo_id = 325384922; // your id
 $update = file_get_contents('php://input');
 $update = json_decode($update, TRUE);
 // This file By @Omar_Real
