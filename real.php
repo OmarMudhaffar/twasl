@@ -1,8 +1,8 @@
 <?php
-
-$botToken = ""; // your bot token
+$botToken = "300049013:AAH_MhPC3CyxQUvLF2LR37u3eSbMRa5ZkYE";
 $website = "https://api.telegram.org/bot".$botToken;
-$sudo_id = 325384922; // your id
+$sudo_id = 325384922;
+$bot_id = 300049013;
 $update = file_get_contents('php://input');
 $update = json_decode($update, TRUE);
 // This file By @Omar_Real
@@ -20,6 +20,8 @@ $photo = $update["message"]["photo"];
 $audio = $update["message"]["voice"];
 $link = $update["message"]["[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]/"];
 $fwd = $update["message"]["forward_from"];
+$fwd2 = $update["message"]["forward_from"]["id"];
+$user2 = $update["message"]["forward_from"]["username"];
 $pin = $update["message"]["pinned_message"];
 $gif = $update["message"]["document"];
 $ed = $update["message"]["edited_channel_post"];
@@ -33,20 +35,30 @@ $song = $update["message"]["audio"];
 $location = $update["message"]["location"];
 $memb = $update["message"]["message_id"];
 $game = $update["message"]["game"]; 
-$replay = $update["message"]["reply_to_message"];
+$replay = $update["message"]["reply_to_message"]["from"]["id"];
+$replay_user = $update["message"]["reply_to_message"]["from"]["username"];
 
-/*
-if($message && $replay){
-sendMessage(325384922, "هاذ سوة رد لواحد " . "\n" . "معرفة : " . " @" . $user . "\n" . "رسالتة : " . $message . "\n" . "ايدي الكروب : " . $chatId);
-}ط
-if($message and $for == 325384922){
-sendMessage(-1001098238423, $message);	
+
+if ($replay && $message == "هينة" && $for == $sudo_id){
+	sendMessage($chatId, "دي لك زبالة 🌚😹 " . "@" . $replay_user);
 }
+
+$matches = explode(' ', $message); // Group id and msg / ايدي المجموعة او القناة + الرسالة سيرسلها البووت 
 if($message){
-	sendMessage(325384922, $message . " @" . $user);
+sendMessage($matches[0], "$matches[1]");
 }
 
-*/
+if($fwd2 && $bot_id){
+sendMessage($for, "💡Id : " . $fwd2 . "\n💡user : " . "@" . $user2);	
+}
+
+if ($replay && $message == "id"){
+sendMessage($chatId, "💡Id : " . $replay . "\n💡User : " . "@" . $replay_user);
+}
+
+if ($nm){
+sendMessage($chatId, "🔥اهلا عزيزي \n💡تابع @set_web ");
+}
 
 
 if($message == "/me" and $for == $sudo_id){
@@ -62,15 +74,15 @@ sendMessage($chatId, "لا ترسل موقعك يا خرا " . "@" . $user);
 }
 
 if($game and $for != $sudo_id){
-sendMessage($chatId, " مو وكت العاب هسه ابن لكحاب " . "@" . $user);
+sendMessage($chatId, " لا تلعب العاب يا خرا " . "@" . $user);
 }
 
 if($song and $for != $sudo_id){
 sendMessage($chatId, "لا ترسل اغاني يا خرا " . "@" . $user);
 }
 
-if($message == "هلو"){
-sendMessage($chatId,  "هلوات " . $re);
+if($omar == ["send " + $message]){
+sendMessage($chatId, $message);
 }
 
 if($message == "type"){
@@ -80,9 +92,6 @@ sendMessage ($chatId, "🌝 The Type of Group is : " . $type);
 if($message == "عدد رسائلي"){
 sendMessage ($chatId, "عدد رسائلك هوة : " . $memb); 
 }
-
-
-
 
 if($dp and $for != $sudo_id){
 sendMessage($chatId, "هاذ الخرا وخر صورت الكروب " . "@" . $user);
@@ -124,29 +133,25 @@ if($photo and $for != $sudo_id){
 sendMessage($chatId, "لا ترسل صور يا خرا " . "@" . $user);
 }
 
-
-
 if($test and $for != $sudo_id){
 sendMessage($chatId, "  لا ترسل جهة اتصال يخرا " . "@" . $user);
 }
 
-
 if ($left){
 sendMessage($chatId, " هذا لخرا طلع   " . "@" . $user);
 }
-
 
 if ($sticker and $for != $sudo_id){
 sendMessage($chatId, "لا ترسل ملصقات يا خرا " . "@" . $user); // OmarReal
 }
 
 if ($message == "/start"){
-	sendMessage($chatId, "اهلا بك 💡 بك يا" .  " @" . $user ." " . "اضفني 💭 الى مجموعتك 👥 وسوف اقوم بل تحذير 📵");
+	sendMessage($chatId, "اهلا بك 💡 بك يا" .  " @" . $user ." " . "اضفني 💭 الى مجموعتك 👥 وسوف اقوم بل تحذير 📵\n✨ قناة السورس @set_web" );
 }
 
 // code by omar
 
-if ($message == "/id"){
+if ($message === "/id" && $message != $replay){
 	sendMessage ($chatId, "🎈 Gp Id : " . $chatId 
 	. "\n" . "🎈 User : " 
 	. "@"  . $user 
@@ -168,8 +173,8 @@ if ($message == "/id"){
 }
 */
 
-		if ($message ==  '/date' ){
-			sendMessage($chatId, date("📆 y-m-d \n ⏱ h:i:s"));
+if ($message ==  '/date' ){
+sendMessage($chatId, date("📆 y-m-d \n ⏱ h:i:s"));
 	
 		
 	}
@@ -179,5 +184,6 @@ if ($message == "/id"){
 		file_get_contents($url);
 		}
 		
+
 		?>
 		
