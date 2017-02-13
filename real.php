@@ -89,8 +89,8 @@ if($message == "type"){
 sendMessage ($chatId, "🌝 The Type of Group is : " . $type); 
 }
 
-if($message == "عدد رسائلي"){
-sendMessage ($chatId, "عدد رسائلك هوة : " . $memb); 
+if($message == "عدد رسائل المجموعة"){
+sendMessage ($chatId, "عدد الرسائل هوة : " . $memb); 
 }
 
 if($dp and $for != $sudo_id){
