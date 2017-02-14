@@ -80,8 +80,8 @@ if($song and $for != $sudo_id){
 sendMessage($chatId, "لا ترسل اغاني يا خرا " . "@" . $user);
 }
 
-if($message == "type"){
-sendMessage ($chatId, "🌝 The Type of Group is : " . $type); 
+if($message == "نوع المجموعة"){
+sendMessage ($chatId, "نوع المجموعة هوة : " . $type); 
 }
 
 if($message == "عدد رسائلي"){
