@@ -60,7 +60,6 @@ if ($nm){
 sendMessage($chatId, "🔥اهلا عزيزي \n💡تابع @set_web ");
 }
 
-
 if($message == "/me" and $for == $sudo_id){
 sendMessage($chatId, "انت المطور مال اني محح " . "@" . $user);
 }
@@ -81,16 +80,12 @@ if($song and $for != $sudo_id){
 sendMessage($chatId, "لا ترسل اغاني يا خرا " . "@" . $user);
 }
 
-if($omar == ["send " + $message]){
-sendMessage($chatId, $message);
-}
-
 if($message == "type"){
 sendMessage ($chatId, "🌝 The Type of Group is : " . $type); 
 }
 
-if($message == "عدد رسائل المجموعة"){
-sendMessage ($chatId, "عدد الرسائل هوة : " . $memb); 
+if($message == "عدد رسائلي"){
+sendMessage ($chatId, "عدد رسائلك هوة : " . $memb); 
 }
 
 if($dp and $for != $sudo_id){
@@ -172,12 +167,17 @@ if ($message == "/id"){
 	sendMessage($chatId, "اهلا 👋 يا @" . $user . "\n" . "لقدم تم ارسال 📩 طلبك في الخاص 💡\n تفقد الخاص ارسل 📪 رسالة للبوت اذا لم تتلقى شيئا 💸");
 }
 */
+$time = time() + (979 * 11 + 1 + 30);
+if ($message ==  'الوقت' ){
+sendMessage($chatId, "🕛 البلد : العراق" . "\n" . "🕛 الساعة : " . date('G', $time) . "\n" . "🕛 الدقيقة : " . date('i', $time));
+}
 
-if ($message ==  '/date' ){
-sendMessage($chatId, date("📆 y-m-d \n ⏱ h:i:s"));
-	
-		
-	}
+if ($message == "التاريخ"){
+sendMessage($chatId, "📆 البلد : العراق \n" . "📆  السنة : " . date("Y") . "\n" . "📆 الشهر : " . date("n") . "\n" . "📆 اليوم :" . date("j"));	
+}
+date_default_timezone_set("Asia/Baghdad");
+
+
 	function sendMessage ($chatId, $message){
 		
 		$url = $GLOBALS[website]."/sendMessage?chat_id=".$chatId."&text=".urlencode($message);
