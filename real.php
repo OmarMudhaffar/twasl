@@ -50,6 +50,7 @@ $mensagemID = $update['message']['reply_to_message']['message_id'];
 $group = -1001055207438; // ايدي الكروب لاستقبال الرسائل
 
 
+
 if ($message == "/help"){
 	sendMessage($chatId, "اهلا 💡بك عزيزي" . " @" . $user . "\n
 	
