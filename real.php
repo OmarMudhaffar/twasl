@@ -1,5 +1,5 @@
 <?php
-$botToken = "300049013:AAH_MhPC3CyxQUvLF2LR37u3eSbMRa5ZkYE"; // توكن
+$botToken = ""; // توكن
 $website = "https://api.telegram.org/bot".$botToken;
 $sudo_id = 325384922; // ايدي المطور
 $bot_id = 300049013; // ايدي البوت 
