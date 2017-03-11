@@ -2,7 +2,7 @@
 // By @Omar_Real 
 // By @Send_Message  
 // Ch @touch_t
-$botToken = " " // توكن البوت;
+$botToken = " "; // توكن البوت
 $website = "https://api.telegram.org/bot".$botToken;
 $sudo_id = 325384922; // ايدي المطور
 $update = file_get_contents('php://input');
