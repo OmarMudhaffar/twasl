@@ -82,6 +82,10 @@ if ($message == "/unbanall" && $for == $sudo_id){
 file_put_contents($file, "<?php");
 }
 
+if ($message && in_array($for,$ban)){
+sendmark($chatId, "عذرا ❗️لقد تم حضرك لا يمكنك ارسال الرسائل 📩🔷 ",$memb);
+}
+
     function forwardMessage ($group, $chatId, $memb){
 		   $url = $GLOBALS[website].'/forwardMessage?chat_id='.$group.'&from_chat_id='.$chatId.'&message_id='.$memb;
 			file_get_contents($url);
