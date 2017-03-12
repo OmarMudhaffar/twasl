@@ -62,7 +62,7 @@ forwardMessage($twasl[0],$chatId,$memb);
 sendMessage($twasl[0], "الملصق بواسطت ☘ :  @" . $user);
 }
 
-if ($message && $fwdrep){
+if ($message && $fwdrep !"/ban"){
 sendMessage($fwdrep, " $message " );	
 }
 
