@@ -53,11 +53,11 @@ if ($message && $chatId != $group && $type == "private" && !in_array($for,$ban))
 forwardMessage($twasl[0] ,$chatId, $memb);
 }
 
-if ($photo && $chatId != $group && $type == "private" or $audio && $type == "private" or $gif && $type == "private" or $test && $type == "private" && !in_array($for,$ban)){
+if ($photo && $chatId != $group && $type == "private" or $audio && $type == "private" or $gif && $type == "private" or $test && $type == "private" && !in_array($for,$ban) && $for != $sudo_id){
 forwardMessage($twasl[0] ,$chatId, $memb);
 }
 
-if ($sticker && $type == "private" && $for != in_array($for,$ban)){
+if ($sticker && $type == "private" && $for != in_array($for,$ban) && $for != $sudo_id){
 forwardMessage($twasl[0],$chatId,$memb);
 sendMessage($twasl[0], "الملصق بواسطت ☘ :  @" . $user);
 }
