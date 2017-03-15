@@ -1,1 +1,31 @@
-cont
+<?php
+
+$nm = $update["message"]["new_chat_member"];
+$left = $update["message"]["left_chat_member"];
+$type = $update["message"]["chat"]["type"];
+$user = $update["message"]["from"]["username"];
+$test = $update["message"]["contact"];
+$numper = strlen($message);
+$sticker = $update["message"]["sticker"];
+$photo = $update["message"]["photo"];
+$audio = $update["message"]["voice"];
+$song = $update["message"]["audio"];
+$nm = $update["message"]["new_chat_member"];
+$pin = $update["message"]["pinned_message"];
+$fwd = $update["message"]["forward_from"]["id"];
+$memb = $update["message"]["message_id"];
+$user = $update["message"]["from"]["username"];
+$message = $update["message"]["text"];
+$gif = $update["message"]["document"];
+$reply = $update["message"]["reply_to_message"];
+$np = $update["message"]["new_chat_photo"];
+$dp = $update["message"]["delete_chat_photo"];
+$for = $update["message"]["from"]["id"];
+$replay = $update["message"]["reply_to_message"]["from"]["id"];
+$video = $update["message"]["video"];
+$mensagemID = $update['message']['reply_to_message']['message_id'];
+$chatID = $update['message']['reply_to_message']['chat']['id'];
+$fwdrep = $update['message']['reply_to_message']['forward_from']['id'];
+$mensagemID = $update['message']['reply_to_message']['message_id'];
+$chatId = $update["message"]["chat"]["id"];
+$for = $update["message"]["from"]["id"];
