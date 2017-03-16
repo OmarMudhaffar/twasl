@@ -26,7 +26,11 @@ if ($message != in_array($message, $welcome) && $for == $sudo_id &&  !$fwd && !$
 sendmark($chatId, "تم ✅ اضافت الترحيب 👋" , $memb);
 }
 
-if($message == "/start"){
+if($message == "/start" && $type == "private"){
+sendmark($chatId, $we[0], $memb);
+}
+
+if($message == "/welcome" && $for == $sudo_id){
 sendmark($chatId, $we[0], $memb);
 }
 
