@@ -76,7 +76,7 @@ sendmark($fwdrep, "تم ✅ حضرك من البوت 🤖❗️");
 }
 
 if ($message == "/ban" and $for == $sudo_id){
-file_put_contents($file, "\n" . '$ban[] = ' . $replay . ";", FILE_APPEND);
+file_put_contents($file, "\n" . '$ban[] = ' . $fwdrep . ";", FILE_APPEND);
 }
 
 if ($message == "/unbanall" && $for == $sudo_id){
