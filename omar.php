@@ -22,7 +22,7 @@ if($message != in_array($message, $welcome) && $for == $sudo_id){
 file_put_contents($welcome_file, "<?php\n" . '$we[] ='."'$im'" . ";");
 }
 
-if ($message != in_array($message, $welcome) && $for == $sudo_id &&  !$fwd && !$sticker && !$photo && !$audio && !$nm && !$fwd && !$gif && !$pin && !$test && !$left && !$video && !$np && !$dp && !$song){
+if ($message != in_array($message, $welcome) && $for == $sudo_id &&  !$fwd && !$sticker && !$photo && !$audio && !$nm && !$fwd && !$gif && !$pin && !$test && !$left && !$video && !$np && !$dp && !$song && $message != "/setchat" && $message != "/setsudo"){
 sendmark($chatId, "تم ✅ اضافت الترحيب 👋" , $memb);
 }
 
