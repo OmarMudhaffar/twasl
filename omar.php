@@ -46,11 +46,11 @@ if ($message == "/setsudo" && $for == $sudo_id){
 sendmark($chatId, "تم ✅ تفعيل استقبال الرسائل الى المطور 📩🔹" , $memb);
 }
 
-if ($message == "/setchat" && $for == $sudo_id && $type == "supergroup"){
+if ($message == "/add" && $for == $sudo_id && $type == "supergroup"){
 file_put_contents($file4, "<?php" . "\n" . '$twasl[] = ' . $chatId . ";");
 }
 
-if ($message == "/setsudo" && $for == $sudo_id){
+if ($message == "/addpv" && $for == $sudo_id){
 file_put_contents($file4, "<?php" . "\n" . '$twasl[] = ' . $sudo_id . ";");
 }
 
