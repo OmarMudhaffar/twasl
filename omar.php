@@ -18,7 +18,7 @@ include "control.php";
 
 $welcome = explode("/set", $message);
 $im = implode("", $welcome);
-if($message != in_array($message, $welcome) && $for == $sudo_id){
+if($message != in_array($message, $welcome) && $for == $sudo_id && $msssage != "/setchat" && $message != "/setsudo"){
 file_put_contents($welcome_file, "<?php\n" . '$we[] ='."'$im'" . ";");
 }
 
