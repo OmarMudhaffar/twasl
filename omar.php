@@ -38,15 +38,15 @@ if ($message && in_array($for,$ban)){
 sendmark($chatId, "عذرا ❗️لقد تم حضرك لا يمكنك ارسال الرسائل 📩🔷",$memb);
 }
 
-if($message == "/setchat" && $for == $sudo_id && $type == "supergroup"){
+if($message == "/addchat" && $for == $sudo_id && $type == "supergroup"){
 sendmark($chatId, "تم ✅ تفعيل هاذه المجموعة لاستقبال الرسائل 📩🔹 " , $memb);
 }
 
-if ($message == "/setsudo" && $for == $sudo_id){
+if ($message == "/addpv" && $for == $sudo_id){
 sendmark($chatId, "تم ✅ تفعيل استقبال الرسائل الى المطور 📩🔹" , $memb);
 }
 
-if ($message == "/add" && $for == $sudo_id && $type == "supergroup"){
+if ($message == "/addchat" && $for == $sudo_id && $type == "supergroup"){
 file_put_contents($file4, "<?php" . "\n" . '$twasl[] = ' . $chatId . ";");
 }
 
