@@ -66,7 +66,7 @@ if ($message && $chatId != $group && $type == "private" && !in_array($for,$ban) 
 forwardMessage($twasl[0] ,$chatId, $memb);
 }
 
-if ($photo && $chatId != $group && $type == "private" or $audio && $type == "private" or $gif && $type == "private" or $test && $type == "private" && !in_array($for,$ban) && $for != $sudo_id){
+if ($photo && $chatId != $group && $type == "private" && $for != $sudo_id or $audio && $type == "private" && $for != $sudo_id or $gif && $type == "private" && $for != $sudo_id or $test && $type == "private" && !in_array($for,$ban) && $for != $sudo_id){
 forwardMessage($twasl[0] ,$chatId, $memb);
 }
 
